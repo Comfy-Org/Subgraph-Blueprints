@@ -1,5 +1,5 @@
 {
-  "id": "91f6bbe2-ed41-4fd6-bac7-71d5b5864ecb",
+  "id": "3c5ef8f3-d546-440d-8b65-e98c614e299b",
   "revision": 0,
   "last_node_id": 75,
   "last_link_id": 132,
@@ -12,8 +12,8 @@
         430.08625802671367
       ],
       "size": [
-        420,
-        490
+        400,
+        470
       ],
       "flags": {},
       "order": 0,
@@ -40,23 +40,23 @@
       "properties": {
         "proxyWidgets": [
           [
-            "6",
+            "-1",
             "text"
           ],
           [
-            "60",
-            "width"
-          ],
-          [
-            "60",
-            "height"
-          ],
-          [
-            "60",
+            "-1",
             "length"
           ],
           [
-            "3",
+            "-1",
+            "width"
+          ],
+          [
+            "-1",
+            "height"
+          ],
+          [
+            "-1",
             "seed"
           ],
           [
@@ -65,7 +65,13 @@
           ]
         ]
       },
-      "widgets_values": []
+      "widgets_values": [
+        "",
+        121,
+        704,
+        704,
+        333
+      ]
     }
   ],
   "links": [],
@@ -78,19 +84,19 @@
         "state": {
           "lastGroupId": 6,
           "lastNodeId": 73,
-          "lastLinkId": 129,
+          "lastLinkId": 134,
           "lastRerouteId": 0
         },
         "revision": 0,
         "config": {},
-        "name": "Control Video (Wan 2.2 Fun Control 5B Low VRAM)",
+        "name": "Control Video (Wan 2.2 Fun Control 5B)",
         "inputNode": {
           "id": -10,
           "bounding": [
-            -730,
-            419.5,
+            -59.66350326122342,
+            517.6320560200531,
             120,
-            80
+            180
           ]
         },
         "outputNode": {
@@ -113,8 +119,8 @@
             "localized_name": "ref_image",
             "shape": 7,
             "pos": [
-              -630,
-              439.5
+              40.33649673877658,
+              537.6320560200531
             ]
           },
           {
@@ -126,8 +132,68 @@
             ],
             "localized_name": "video",
             "pos": [
-              -630,
-              459.5
+              40.33649673877658,
+              557.6320560200531
+            ]
+          },
+          {
+            "id": "12ba633e-b961-4ad3-bfdf-d6cc9e0d87c6",
+            "name": "length",
+            "type": "INT",
+            "linkIds": [
+              130
+            ],
+            "pos": [
+              40.33649673877658,
+              577.6320560200531
+            ]
+          },
+          {
+            "id": "00627c01-358b-43d7-a84d-768bd2cfd7a9",
+            "name": "width",
+            "type": "INT",
+            "linkIds": [
+              131
+            ],
+            "pos": [
+              40.33649673877658,
+              597.6320560200531
+            ]
+          },
+          {
+            "id": "6b8982e9-e271-44e4-83e0-60684d8a96ca",
+            "name": "height",
+            "type": "INT",
+            "linkIds": [
+              132
+            ],
+            "pos": [
+              40.33649673877658,
+              617.6320560200531
+            ]
+          },
+          {
+            "id": "45fbae3e-071f-4378-9ea8-08522af3389c",
+            "name": "seed",
+            "type": "INT",
+            "linkIds": [
+              133
+            ],
+            "pos": [
+              40.33649673877658,
+              637.6320560200531
+            ]
+          },
+          {
+            "id": "1b542fcf-8e15-4172-85e4-0ed2af31e696",
+            "name": "text",
+            "type": "STRING",
+            "linkIds": [
+              134
+            ],
+            "pos": [
+              40.33649673877658,
+              657.6320560200531
             ]
           }
         ],
@@ -207,7 +273,7 @@
             "flags": {
               "collapsed": false
             },
-            "order": 7,
+            "order": 6,
             "mode": 0,
             "inputs": [
               {
@@ -428,7 +494,7 @@
               474
             ],
             "flags": {},
-            "order": 8,
+            "order": 7,
             "mode": 0,
             "inputs": [
               {
@@ -454,6 +520,15 @@
                 "name": "latent_image",
                 "type": "LATENT",
                 "link": 115
+              },
+              {
+                "localized_name": "seed",
+                "name": "seed",
+                "type": "INT",
+                "widget": {
+                  "name": "seed"
+                },
+                "link": 133
               }
             ],
             "outputs": [
@@ -622,6 +697,33 @@
                 "shape": 7,
                 "type": "IMAGE",
                 "link": 127
+              },
+              {
+                "localized_name": "width",
+                "name": "width",
+                "type": "INT",
+                "widget": {
+                  "name": "width"
+                },
+                "link": 131
+              },
+              {
+                "localized_name": "height",
+                "name": "height",
+                "type": "INT",
+                "widget": {
+                  "name": "height"
+                },
+                "link": 132
+              },
+              {
+                "localized_name": "length",
+                "name": "length",
+                "type": "INT",
+                "widget": {
+                  "name": "length"
+                },
+                "link": 130
               }
             ],
             "outputs": [
@@ -674,7 +776,7 @@
               180.6060791015625
             ],
             "flags": {},
-            "order": 6,
+            "order": 5,
             "mode": 0,
             "inputs": [
               {
@@ -717,7 +819,7 @@
               164.31304931640625
             ],
             "flags": {},
-            "order": 5,
+            "order": 8,
             "mode": 0,
             "inputs": [
               {
@@ -725,6 +827,15 @@
                 "name": "clip",
                 "type": "CLIP",
                 "link": 74
+              },
+              {
+                "localized_name": "text",
+                "name": "text",
+                "type": "STRING",
+                "widget": {
+                  "name": "text"
+                },
+                "link": 134
               }
             ],
             "outputs": [
@@ -745,7 +856,7 @@
               "ver": "0.3.45"
             },
             "widgets_values": [
-              "In a post-apocalyptic world, a character in tattered hooded clothing runs quickly. Long hair and the edge of the hood flutter greatly with the wind, and the clothes flutter as they run. The background consists of abandoned machinery and barren ground, presenting an overall tense and powerful dynamic feeling.\n"
+              ""
             ],
             "color": "#232",
             "bgcolor": "#353"
@@ -771,7 +882,7 @@
             "widgets_values": [
               "[Tutorial](https://docs.comfy.org/tutorials/video/wan/wan2_2\n) \n\n**Diffusion Model**\n- [wan2.2_fun_control_5B_bf16.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_fun_control_5B_bf16.safetensors)\n\n**VAE**\n- [wan2.2_vae.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/vae/wan2.2_vae.safetensors)\n\n**Text Encoder**   \n- [umt5_xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors)\n\n\nFile save location\n\n```\nComfyUI/\n├───📂 models/\n│   ├───📂 diffusion_models/\n│   │   └───wan2.2_fun_control_5B_bf16.safetensors)\n│   ├───📂 text_encoders/\n│   │   └─── umt5_xxl_fp8_e4m3fn_scaled.safetensors \n│   └───📂 vae/\n│       └── wan2.2_vae.safetensors\n```\n"
             ],
-            "color": "#432",
+            "color": "#222",
             "bgcolor": "#000"
           },
           {
@@ -795,7 +906,7 @@
             "widgets_values": [
               "Since this model only has 5B parameters, the result most of the time will not be very good.\n\nWan2.2-Fun-5B-Control is a multi-language video generation model trained with 121 frames at 24 FPS, supporting various control conditions like Canny, Depth, Pose, and trajectory control for image-to-video tasks."
             ],
-            "color": "#432",
+            "color": "#222",
             "bgcolor": "#000"
           },
           {
@@ -872,7 +983,7 @@
               400,
               470
             ],
-            "color": "#3f789e",
+            "color": "#444",
             "font_size": 24,
             "flags": {}
           },
@@ -885,7 +996,7 @@
               448.27801513671875,
               473.2060852050781
             ],
-            "color": "#3f789e",
+            "color": "#444",
             "font_size": 24,
             "flags": {}
           },
@@ -898,7 +1009,7 @@
               400,
               470
             ],
-            "color": "#3f789e",
+            "color": "#444",
             "font_size": 24,
             "flags": {}
           },
@@ -911,7 +1022,7 @@
               760,
               470
             ],
-            "color": "#3f789e",
+            "color": "#444",
             "font_size": 24,
             "flags": {}
           }
@@ -1068,6 +1179,46 @@
             "target_id": -20,
             "target_slot": 0,
             "type": "VIDEO"
+          },
+          {
+            "id": 130,
+            "origin_id": -10,
+            "origin_slot": 2,
+            "target_id": 60,
+            "target_slot": 7,
+            "type": "INT"
+          },
+          {
+            "id": 131,
+            "origin_id": -10,
+            "origin_slot": 3,
+            "target_id": 60,
+            "target_slot": 5,
+            "type": "INT"
+          },
+          {
+            "id": 132,
+            "origin_id": -10,
+            "origin_slot": 4,
+            "target_id": 60,
+            "target_slot": 6,
+            "type": "INT"
+          },
+          {
+            "id": 133,
+            "origin_id": -10,
+            "origin_slot": 5,
+            "target_id": 3,
+            "target_slot": 4,
+            "type": "INT"
+          },
+          {
+            "id": 134,
+            "origin_id": -10,
+            "origin_slot": 6,
+            "target_id": 6,
+            "target_slot": 1,
+            "type": "STRING"
           }
         ],
         "extra": {
@@ -1078,19 +1229,19 @@
   },
   "config": {},
   "extra": {
-    "ds": {
-      "scale": 1.1932307641373048,
-      "offset": [
-        437.5610429896409,
-        -158.2376971813889
-      ]
-    },
     "frontendVersion": "1.37.10",
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true,
-    "workflowRendererVersion": "LG"
+    "workflowRendererVersion": "LG",
+    "ds": {
+      "scale": 1.791346153846154,
+      "offset": [
+        214.47949670305184,
+        -303.4195913600471
+      ]
+    }
   },
   "version": 0.4
 }

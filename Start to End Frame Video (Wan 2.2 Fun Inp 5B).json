@@ -8,12 +8,12 @@
       "id": 75,
       "type": "7c8c9d01-5019-4f70-9b66-086a2724d601",
       "pos": [
-        420,
-        160
+        400,
+        130
       ],
       "size": [
-        480,
-        390
+        400,
+        470
       ],
       "flags": {},
       "order": 0,
@@ -40,23 +40,23 @@
       "properties": {
         "proxyWidgets": [
           [
-            "6",
+            "-1",
             "text"
           ],
           [
-            "73",
+            "-1",
             "length"
           ],
           [
-            "73",
+            "-1",
             "width"
           ],
           [
-            "73",
+            "-1",
             "height"
           ],
           [
-            "3",
+            "-1",
             "seed"
           ],
           [
@@ -65,7 +65,13 @@
           ]
         ]
       },
-      "widgets_values": []
+      "widgets_values": [
+        "",
+        81,
+        640,
+        640,
+        333
+      ]
     }
   ],
   "links": [],
@@ -76,9 +82,9 @@
         "id": "7c8c9d01-5019-4f70-9b66-086a2724d601",
         "version": 1,
         "state": {
-          "lastGroupId": 7,
+          "lastGroupId": 8,
           "lastNodeId": 74,
-          "lastLinkId": 137,
+          "lastLinkId": 142,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -87,10 +93,10 @@
         "inputNode": {
           "id": -10,
           "bounding": [
-            -730,
-            420,
+            -54.92197532874122,
+            512.267761666367,
             120,
-            80
+            180
           ]
         },
         "outputNode": {
@@ -113,8 +119,8 @@
             "localized_name": "start_image",
             "shape": 7,
             "pos": [
-              55,
-              20
+              45.07802467125879,
+              532.267761666367
             ]
           },
           {
@@ -127,8 +133,68 @@
             "localized_name": "end_image",
             "shape": 7,
             "pos": [
-              55,
-              40
+              45.07802467125879,
+              552.267761666367
+            ]
+          },
+          {
+            "id": "0e33df6a-5f63-41ec-9b2b-c47353f108f9",
+            "name": "text",
+            "type": "STRING",
+            "linkIds": [
+              138
+            ],
+            "pos": [
+              45.07802467125879,
+              572.267761666367
+            ]
+          },
+          {
+            "id": "4a194111-3d9d-4217-9ab2-ff7a0b7f365f",
+            "name": "length",
+            "type": "INT",
+            "linkIds": [
+              139
+            ],
+            "pos": [
+              45.07802467125879,
+              592.267761666367
+            ]
+          },
+          {
+            "id": "8c07a6cc-d61c-47b1-9c8d-3f2ea5449a7f",
+            "name": "width",
+            "type": "INT",
+            "linkIds": [
+              140
+            ],
+            "pos": [
+              45.07802467125879,
+              612.267761666367
+            ]
+          },
+          {
+            "id": "5e2a3356-6296-4774-b952-3d371c59fce4",
+            "name": "height",
+            "type": "INT",
+            "linkIds": [
+              141
+            ],
+            "pos": [
+              45.07802467125879,
+              632.267761666367
+            ]
+          },
+          {
+            "id": "6d6bfab0-58ea-4a34-937a-ef373494793c",
+            "name": "seed",
+            "type": "INT",
+            "linkIds": [
+              142
+            ],
+            "pos": [
+              45.07802467125879,
+              652.267761666367
             ]
           }
         ],
@@ -142,8 +208,8 @@
             ],
             "localized_name": "VIDEO",
             "pos": [
-              20,
-              20
+              1615,
+              450
             ]
           }
         ],
@@ -199,7 +265,7 @@
             "type": "VAEDecode",
             "pos": [
               1220,
-              640
+              690
             ],
             "size": [
               210,
@@ -238,7 +304,9 @@
               "cnr_id": "comfy-core",
               "ver": "0.3.45"
             },
-            "widgets_values": []
+            "widgets_values": [],
+            "color": "#222",
+            "bgcolor": "#000"
           },
           {
             "id": 7,
@@ -252,7 +320,7 @@
               180.6060791015625
             ],
             "flags": {},
-            "order": 5,
+            "order": 4,
             "mode": 0,
             "inputs": [
               {
@@ -376,7 +444,7 @@
             "type": "ModelSamplingSD3",
             "pos": [
               1220,
-              10
+              60
             ],
             "size": [
               210,
@@ -385,7 +453,7 @@
             "flags": {
               "collapsed": false
             },
-            "order": 6,
+            "order": 5,
             "mode": 0,
             "inputs": [
               {
@@ -413,7 +481,9 @@
             },
             "widgets_values": [
               8
-            ]
+            ],
+            "color": "#222",
+            "bgcolor": "#000"
           },
           {
             "id": 73,
@@ -468,6 +538,33 @@
                 "shape": 7,
                 "type": "IMAGE",
                 "link": 137
+              },
+              {
+                "localized_name": "width",
+                "name": "width",
+                "type": "INT",
+                "widget": {
+                  "name": "width"
+                },
+                "link": 140
+              },
+              {
+                "localized_name": "height",
+                "name": "height",
+                "type": "INT",
+                "widget": {
+                  "name": "height"
+                },
+                "link": 141
+              },
+              {
+                "localized_name": "length",
+                "name": "length",
+                "type": "INT",
+                "widget": {
+                  "name": "length"
+                },
+                "link": 139
               }
             ],
             "outputs": [
@@ -513,14 +610,14 @@
             "type": "KSampler",
             "pos": [
               1220,
-              110
+              160
             ],
             "size": [
               315,
               474
             ],
             "flags": {},
-            "order": 7,
+            "order": 6,
             "mode": 0,
             "inputs": [
               {
@@ -546,6 +643,15 @@
                 "name": "latent_image",
                 "type": "LATENT",
                 "link": 133
+              },
+              {
+                "localized_name": "seed",
+                "name": "seed",
+                "type": "INT",
+                "widget": {
+                  "name": "seed"
+                },
+                "link": 142
               }
             ],
             "outputs": [
@@ -572,7 +678,9 @@
               "uni_pc",
               "simple",
               1
-            ]
+            ],
+            "color": "#222",
+            "bgcolor": "#000"
           },
           {
             "id": 6,
@@ -586,7 +694,7 @@
               164.31304931640625
             ],
             "flags": {},
-            "order": 4,
+            "order": 7,
             "mode": 0,
             "inputs": [
               {
@@ -594,6 +702,15 @@
                 "name": "clip",
                 "type": "CLIP",
                 "link": 74
+              },
+              {
+                "localized_name": "text",
+                "name": "text",
+                "type": "STRING",
+                "widget": {
+                  "name": "text"
+                },
+                "link": 138
               }
             ],
             "outputs": [
@@ -614,41 +731,17 @@
               "ver": "0.3.45"
             },
             "widgets_values": [
-              "Flowers are in full bloom, time-lapse photography"
+              ""
             ],
             "color": "#232",
             "bgcolor": "#353"
-          },
-          {
-            "id": 59,
-            "type": "MarkdownNote",
-            "pos": [
-              -550,
-              10
-            ],
-            "size": [
-              480,
-              340
-            ],
-            "flags": {},
-            "order": 3,
-            "mode": 0,
-            "inputs": [],
-            "outputs": [],
-            "title": "Model Links",
-            "properties": {},
-            "widgets_values": [
-              "**Diffusion Model**\n- [wan2.2_fun_inpaint_5B_bf16.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_fun_inpaint_5B_bf16.safetensors)\n\n**VAE**\n- [wan2.2_vae.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/vae/wan2.2_vae.safetensors)\n\n**Text Encoder**   \n- [umt5_xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors)\n\n\nFile save location\n\n```\nComfyUI/\n├───📂 models/\n│   ├───📂 diffusion_models/\n│   │   └───wan2.2_fun_inpaint_5B_bf16.safetensors\n│   ├───📂 text_encoders/\n│   │   └─── umt5_xxl_fp8_e4m3fn_scaled.safetensors \n│   └───📂 vae/\n│       └── wan2.2_vae.safetensors\n```\n"
-            ],
-            "color": "#432",
-            "bgcolor": "#000"
           },
           {
             "id": 57,
             "type": "CreateVideo",
             "pos": [
               1220,
-              730
+              780
             ],
             "size": [
               270,
@@ -689,7 +782,33 @@
             },
             "widgets_values": [
               24
-            ]
+            ],
+            "color": "#222",
+            "bgcolor": "#000"
+          },
+          {
+            "id": 59,
+            "type": "MarkdownNote",
+            "pos": [
+              -550,
+              10
+            ],
+            "size": [
+              480,
+              340
+            ],
+            "flags": {},
+            "order": 3,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [],
+            "title": "Model Links",
+            "properties": {},
+            "widgets_values": [
+              "**Diffusion Model**\n- [wan2.2_fun_inpaint_5B_bf16.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_fun_inpaint_5B_bf16.safetensors)\n\n**VAE**\n- [wan2.2_vae.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/vae/wan2.2_vae.safetensors)\n\n**Text Encoder**   \n- [umt5_xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors)\n\n\nFile save location\n\n```\nComfyUI/\n├───📂 models/\n│   ├───📂 diffusion_models/\n│   │   └───wan2.2_fun_inpaint_5B_bf16.safetensors\n│   ├───📂 text_encoders/\n│   │   └─── umt5_xxl_fp8_e4m3fn_scaled.safetensors \n│   └───📂 vae/\n│       └── wan2.2_vae.safetensors\n```\n"
+            ],
+            "color": "#222",
+            "bgcolor": "#000"
           }
         ],
         "groups": [
@@ -702,7 +821,7 @@
               400,
               470
             ],
-            "color": "#3f789e",
+            "color": "#444",
             "font_size": 24,
             "flags": {}
           },
@@ -715,7 +834,7 @@
               448.27801513671875,
               473.2060852050781
             ],
-            "color": "#3f789e",
+            "color": "#444",
             "font_size": 24,
             "flags": {}
           },
@@ -728,7 +847,7 @@
               870,
               470
             ],
-            "color": "#3f789e",
+            "color": "#444",
             "font_size": 24,
             "flags": {}
           },
@@ -739,9 +858,22 @@
               830,
               -20,
               360,
-              320
+              960
             ],
-            "color": "#3f789e",
+            "color": "#444",
+            "font_size": 24,
+            "flags": {}
+          },
+          {
+            "id": 8,
+            "title": "Sampling",
+            "bounding": [
+              1210,
+              -20,
+              320,
+              960
+            ],
+            "color": "#444",
             "font_size": 24,
             "flags": {}
           }
@@ -874,6 +1006,46 @@
             "target_id": -20,
             "target_slot": 0,
             "type": "VIDEO"
+          },
+          {
+            "id": 138,
+            "origin_id": -10,
+            "origin_slot": 2,
+            "target_id": 6,
+            "target_slot": 1,
+            "type": "STRING"
+          },
+          {
+            "id": 139,
+            "origin_id": -10,
+            "origin_slot": 3,
+            "target_id": 73,
+            "target_slot": 8,
+            "type": "INT"
+          },
+          {
+            "id": 140,
+            "origin_id": -10,
+            "origin_slot": 4,
+            "target_id": 73,
+            "target_slot": 6,
+            "type": "INT"
+          },
+          {
+            "id": 141,
+            "origin_id": -10,
+            "origin_slot": 5,
+            "target_id": 73,
+            "target_slot": 7,
+            "type": "INT"
+          },
+          {
+            "id": 142,
+            "origin_id": -10,
+            "origin_slot": 6,
+            "target_id": 3,
+            "target_slot": 4,
+            "type": "INT"
           }
         ],
         "extra": {
@@ -884,19 +1056,19 @@
   },
   "config": {},
   "extra": {
-    "ds": {
-      "scale": 1.064090188043919,
-      "offset": [
-        370.56490555266606,
-        212.7479553463721
-      ]
-    },
     "frontendVersion": "1.37.10",
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true,
-    "workflowRendererVersion": "LG"
+    "workflowRendererVersion": "LG",
+    "ds": {
+      "scale": 1.791346153846154,
+      "offset": [
+        114.54643048845946,
+        -3.3333333333333712
+      ]
+    }
   },
   "version": 0.4
 }

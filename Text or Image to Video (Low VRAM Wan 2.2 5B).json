@@ -12,8 +12,8 @@
         330.31437961957056
       ],
       "size": [
-        490,
-        700
+        400,
+        470
       ],
       "flags": {},
       "order": 0,
@@ -35,23 +35,23 @@
       "properties": {
         "proxyWidgets": [
           [
-            "6",
+            "-1",
             "text"
           ],
           [
-            "55",
+            "-1",
             "length"
           ],
           [
-            "55",
+            "-1",
             "width"
           ],
           [
-            "55",
+            "-1",
             "height"
           ],
           [
-            "3",
+            "-1",
             "seed"
           ],
           [
@@ -60,7 +60,13 @@
           ]
         ]
       },
-      "widgets_values": []
+      "widgets_values": [
+        "",
+        121,
+        1280,
+        704,
+        333
+      ]
     }
   ],
   "links": [],
@@ -71,9 +77,9 @@
         "id": "a31d6cf9-f9e7-4772-8a6b-800cec1a039b",
         "version": 1,
         "state": {
-          "lastGroupId": 4,
+          "lastGroupId": 6,
           "lastNodeId": 59,
-          "lastLinkId": 108,
+          "lastLinkId": 113,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -82,10 +88,10 @@
         "inputNode": {
           "id": -10,
           "bounding": [
-            -730,
-            311.8000030517578,
+            -39.51762997606889,
+            505.2601440927644,
             120,
-            60
+            160.00000000000006
           ]
         },
         "outputNode": {
@@ -108,8 +114,68 @@
             "localized_name": "start_image",
             "shape": 7,
             "pos": [
-              55,
-              20
+              60.48237002393111,
+              525.2601440927644
+            ]
+          },
+          {
+            "id": "3348db48-d356-4897-b62a-31564685713a",
+            "name": "text",
+            "type": "STRING",
+            "linkIds": [
+              109
+            ],
+            "pos": [
+              60.48237002393111,
+              545.2601440927644
+            ]
+          },
+          {
+            "id": "7cff4dcd-cbf9-4f95-9686-c4b4a834ce9e",
+            "name": "length",
+            "type": "INT",
+            "linkIds": [
+              110
+            ],
+            "pos": [
+              60.48237002393111,
+              565.2601440927644
+            ]
+          },
+          {
+            "id": "7b92c36a-66f4-43a0-bac5-297641e63b82",
+            "name": "width",
+            "type": "INT",
+            "linkIds": [
+              111
+            ],
+            "pos": [
+              60.48237002393111,
+              585.2601440927644
+            ]
+          },
+          {
+            "id": "2b4077b3-bf65-4044-a3da-16c2dcd7d1ff",
+            "name": "height",
+            "type": "INT",
+            "linkIds": [
+              112
+            ],
+            "pos": [
+              60.48237002393111,
+              605.2601440927644
+            ]
+          },
+          {
+            "id": "e23f5085-20ee-4685-9f89-46d2998f60af",
+            "name": "seed",
+            "type": "INT",
+            "linkIds": [
+              113
+            ],
+            "pos": [
+              60.48237002393111,
+              625.2601440927644
             ]
           }
         ],
@@ -123,8 +189,8 @@
             ],
             "localized_name": "VIDEO",
             "pos": [
-              20,
-              20
+              1550,
+              331.8000030517578
             ]
           }
         ],
@@ -266,7 +332,7 @@
             "type": "VAEDecode",
             "pos": [
               1190,
-              150
+              180
             ],
             "size": [
               210,
@@ -312,7 +378,7 @@
             "type": "CreateVideo",
             "pos": [
               1200,
-              240
+              270
             ],
             "size": [
               270,
@@ -356,57 +422,6 @@
             ]
           },
           {
-            "id": 55,
-            "type": "Wan22ImageToVideoLatent",
-            "pos": [
-              380,
-              540
-            ],
-            "size": [
-              271.9126892089844,
-              150
-            ],
-            "flags": {},
-            "order": 9,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "vae",
-                "name": "vae",
-                "type": "VAE",
-                "link": 105
-              },
-              {
-                "localized_name": "start_image",
-                "name": "start_image",
-                "shape": 7,
-                "type": "IMAGE",
-                "link": 106
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "LATENT",
-                "name": "LATENT",
-                "type": "LATENT",
-                "links": [
-                  104
-                ]
-              }
-            ],
-            "properties": {
-              "Node name for S&R": "Wan22ImageToVideoLatent",
-              "cnr_id": "comfy-core",
-              "ver": "0.3.45"
-            },
-            "widgets_values": [
-              1280,
-              704,
-              121,
-              1
-            ]
-          },
-          {
             "id": 7,
             "type": "CLIPTextEncode",
             "pos": [
@@ -418,7 +433,7 @@
               180.6060791015625
             ],
             "flags": {},
-            "order": 6,
+            "order": 5,
             "mode": 0,
             "inputs": [
               {
@@ -463,7 +478,7 @@
               164.31304931640625
             ],
             "flags": {},
-            "order": 5,
+            "order": 7,
             "mode": 0,
             "inputs": [
               {
@@ -471,6 +486,15 @@
                 "name": "clip",
                 "type": "CLIP",
                 "link": 74
+              },
+              {
+                "localized_name": "text",
+                "name": "text",
+                "type": "STRING",
+                "widget": {
+                  "name": "text"
+                },
+                "link": 109
               }
             ],
             "outputs": [
@@ -491,7 +515,7 @@
               "ver": "0.3.45"
             },
             "widgets_values": [
-              "Low contrast. In a retro 1970s-style subway station, a street musician plays in dim colors and rough textures. He wears an old jacket, playing guitar with focus. Commuters hurry by, and a small crowd gathers to listen. The camera slowly moves right, capturing the blend of music and city noise, with old subway signs and mottled walls in the background."
+              ""
             ],
             "color": "#232",
             "bgcolor": "#353"
@@ -501,14 +525,14 @@
             "type": "KSampler",
             "pos": [
               850,
-              130
+              160
             ],
             "size": [
               315,
               262
             ],
             "flags": {},
-            "order": 7,
+            "order": 6,
             "mode": 0,
             "inputs": [
               {
@@ -534,6 +558,15 @@
                 "name": "latent_image",
                 "type": "LATENT",
                 "link": 104
+              },
+              {
+                "localized_name": "seed",
+                "name": "seed",
+                "type": "INT",
+                "widget": {
+                  "name": "seed"
+                },
+                "link": 113
               }
             ],
             "outputs": [
@@ -567,7 +600,7 @@
             "type": "ModelSamplingSD3",
             "pos": [
               850,
-              20
+              50
             ],
             "size": [
               210,
@@ -627,8 +660,86 @@
             "widgets_values": [
               "[Tutorial](https://docs.comfy.org/tutorials/video/wan/wan2_2\n) \n\n**Diffusion Model**\n- [wan2.2_ti2v_5B_fp16.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_ti2v_5B_fp16.safetensors)\n\n**VAE**\n- [wan2.2_vae.safetensors](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/vae/wan2.2_vae.safetensors)\n\n**Text Encoder**   \n- [umt5_xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors)\n\n\nFile save location\n\n```\nComfyUI/\n├───📂 models/\n│   ├───📂 diffusion_models/\n│   │   └───wan2.2_ti2v_5B_fp16.safetensors\n│   ├───📂 text_encoders/\n│   │   └─── umt5_xxl_fp8_e4m3fn_scaled.safetensors \n│   └───📂 vae/\n│       └── wan2.2_vae.safetensors\n```\n"
             ],
-            "color": "#432",
+            "color": "#222",
             "bgcolor": "#000"
+          },
+          {
+            "id": 55,
+            "type": "Wan22ImageToVideoLatent",
+            "pos": [
+              450.47014769982,
+              541.056397249203
+            ],
+            "size": [
+              271.9126892089844,
+              150
+            ],
+            "flags": {},
+            "order": 9,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "vae",
+                "name": "vae",
+                "type": "VAE",
+                "link": 105
+              },
+              {
+                "localized_name": "start_image",
+                "name": "start_image",
+                "shape": 7,
+                "type": "IMAGE",
+                "link": 106
+              },
+              {
+                "localized_name": "width",
+                "name": "width",
+                "type": "INT",
+                "widget": {
+                  "name": "width"
+                },
+                "link": 111
+              },
+              {
+                "localized_name": "height",
+                "name": "height",
+                "type": "INT",
+                "widget": {
+                  "name": "height"
+                },
+                "link": 112
+              },
+              {
+                "localized_name": "length",
+                "name": "length",
+                "type": "INT",
+                "widget": {
+                  "name": "length"
+                },
+                "link": 110
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "LATENT",
+                "name": "LATENT",
+                "type": "LATENT",
+                "links": [
+                  104
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "Wan22ImageToVideoLatent",
+              "cnr_id": "comfy-core",
+              "ver": "0.3.45"
+            },
+            "widgets_values": [
+              1280,
+              704,
+              121,
+              1
+            ]
           }
         ],
         "groups": [
@@ -641,7 +752,7 @@
               400,
               453.6000061035156
             ],
-            "color": "#3f789e",
+            "color": "#444",
             "font_size": 24,
             "flags": {}
           },
@@ -654,7 +765,7 @@
               448.27801513671875,
               473.2060852050781
             ],
-            "color": "#3f789e",
+            "color": "#444",
             "font_size": 24,
             "flags": {}
           },
@@ -664,10 +775,36 @@
             "bounding": [
               370,
               470,
-              291.9127197265625,
-              233.60000610351562
+              450,
+              230
             ],
-            "color": "#3f789e",
+            "color": "#444",
+            "font_size": 24,
+            "flags": {}
+          },
+          {
+            "id": 5,
+            "title": "Step 2 - Load Image",
+            "bounding": [
+              -50,
+              450,
+              400,
+              250
+            ],
+            "color": "#444",
+            "font_size": 24,
+            "flags": {}
+          },
+          {
+            "id": 6,
+            "title": "Step 4 - Sampling",
+            "bounding": [
+              840,
+              -20,
+              640,
+              470
+            ],
+            "color": "#444",
             "font_size": 24,
             "flags": {}
           }
@@ -776,6 +913,46 @@
             "target_id": -20,
             "target_slot": 0,
             "type": "VIDEO"
+          },
+          {
+            "id": 109,
+            "origin_id": -10,
+            "origin_slot": 1,
+            "target_id": 6,
+            "target_slot": 1,
+            "type": "STRING"
+          },
+          {
+            "id": 110,
+            "origin_id": -10,
+            "origin_slot": 2,
+            "target_id": 55,
+            "target_slot": 4,
+            "type": "INT"
+          },
+          {
+            "id": 111,
+            "origin_id": -10,
+            "origin_slot": 3,
+            "target_id": 55,
+            "target_slot": 2,
+            "type": "INT"
+          },
+          {
+            "id": 112,
+            "origin_id": -10,
+            "origin_slot": 4,
+            "target_id": 55,
+            "target_slot": 3,
+            "type": "INT"
+          },
+          {
+            "id": 113,
+            "origin_id": -10,
+            "origin_slot": 5,
+            "target_id": 3,
+            "target_slot": 4,
+            "type": "INT"
           }
         ],
         "extra": {
@@ -787,10 +964,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.9944266903456054,
+      "scale": 1.791346153846154,
       "offset": [
-        190.84595325108603,
-        -94.15239010311973
+        115.4837798968756,
+        -203.64771295290393
       ]
     },
     "frontendVersion": "1.37.10",
