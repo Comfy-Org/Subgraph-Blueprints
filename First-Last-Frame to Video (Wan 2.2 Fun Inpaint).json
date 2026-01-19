@@ -32,9 +32,10 @@
       ],
       "outputs": [
         {
-          "name": "VIDEO",
-          "type": "VIDEO",
-          "links": []
+          "label": "images",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null
         }
       ],
       "properties": {
@@ -84,7 +85,7 @@
         "state": {
           "lastGroupId": 22,
           "lastNodeId": 159,
-          "lastLinkId": 268,
+          "lastLinkId": 269,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -200,13 +201,13 @@
         ],
         "outputs": [
           {
-            "id": "45c79f79-5f81-41a5-95f6-0564c4c16b48",
-            "name": "VIDEO",
-            "type": "VIDEO",
+            "id": "287d895c-c6a9-4a7f-97e1-ba635e54f053",
+            "name": "IMAGE",
+            "type": "IMAGE",
             "linkIds": [
-              259
+              269
             ],
-            "localized_name": "VIDEO",
+            "label": "images",
             "pos": [
               1850,
               1490
@@ -718,7 +719,7 @@
               230
             ],
             "flags": {},
-            "order": 17,
+            "order": 16,
             "mode": 0,
             "inputs": [
               {
@@ -995,120 +996,6 @@
             ]
           },
           {
-            "id": 97,
-            "type": "VAEDecode",
-            "pos": [
-              1470,
-              550
-            ],
-            "size": [
-              210,
-              46
-            ],
-            "flags": {},
-            "order": 14,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "samples",
-                "name": "samples",
-                "type": "LATENT",
-                "link": 175
-              },
-              {
-                "localized_name": "vae",
-                "name": "vae",
-                "type": "VAE",
-                "link": 176
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "IMAGE",
-                "name": "IMAGE",
-                "type": "IMAGE",
-                "slot_index": 0,
-                "links": [
-                  179
-                ]
-              }
-            ],
-            "properties": {
-              "Node name for S&R": "VAEDecode",
-              "cnr_id": "comfy-core",
-              "ver": "0.3.45",
-              "enableTabs": false,
-              "tabWidth": 65,
-              "tabXOffset": 10,
-              "hasSecondTab": false,
-              "secondTabText": "Send Back",
-              "secondTabOffset": 80,
-              "secondTabWidth": 65,
-              "ue_properties": {
-                "widget_ue_connectable": {}
-              }
-            },
-            "widgets_values": []
-          },
-          {
-            "id": 100,
-            "type": "CreateVideo",
-            "pos": [
-              1470,
-              630
-            ],
-            "size": [
-              270,
-              78
-            ],
-            "flags": {},
-            "order": 16,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "images",
-                "name": "images",
-                "type": "IMAGE",
-                "link": 179
-              },
-              {
-                "localized_name": "audio",
-                "name": "audio",
-                "shape": 7,
-                "type": "AUDIO",
-                "link": null
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "VIDEO",
-                "name": "VIDEO",
-                "type": "VIDEO",
-                "links": [
-                  259
-                ]
-              }
-            ],
-            "properties": {
-              "Node name for S&R": "CreateVideo",
-              "cnr_id": "comfy-core",
-              "ver": "0.3.45",
-              "enableTabs": false,
-              "tabWidth": 65,
-              "tabXOffset": 10,
-              "hasSecondTab": false,
-              "secondTabText": "Send Back",
-              "secondTabOffset": 80,
-              "secondTabWidth": 65,
-              "ue_properties": {
-                "widget_ue_connectable": {}
-              }
-            },
-            "widgets_values": [
-              16
-            ]
-          },
-          {
             "id": 95,
             "type": "KSamplerAdvanced",
             "pos": [
@@ -1265,6 +1152,62 @@
             ],
             "color": "#222",
             "bgcolor": "#000"
+          },
+          {
+            "id": 97,
+            "type": "VAEDecode",
+            "pos": [
+              1470,
+              550
+            ],
+            "size": [
+              210,
+              46
+            ],
+            "flags": {},
+            "order": 14,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "samples",
+                "name": "samples",
+                "type": "LATENT",
+                "link": 175
+              },
+              {
+                "localized_name": "vae",
+                "name": "vae",
+                "type": "VAE",
+                "link": 176
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "IMAGE",
+                "name": "IMAGE",
+                "type": "IMAGE",
+                "slot_index": 0,
+                "links": [
+                  269
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "VAEDecode",
+              "cnr_id": "comfy-core",
+              "ver": "0.3.45",
+              "enableTabs": false,
+              "tabWidth": 65,
+              "tabXOffset": 10,
+              "hasSecondTab": false,
+              "secondTabText": "Send Back",
+              "secondTabOffset": 80,
+              "secondTabWidth": 65,
+              "ue_properties": {
+                "widget_ue_connectable": {}
+              }
+            },
+            "widgets_values": []
           }
         ],
         "groups": [
@@ -1480,14 +1423,6 @@
             "type": "VAE"
           },
           {
-            "id": 179,
-            "origin_id": 97,
-            "origin_slot": 0,
-            "target_id": 100,
-            "target_slot": 0,
-            "type": "IMAGE"
-          },
-          {
             "id": 178,
             "origin_id": 90,
             "origin_slot": 0,
@@ -1510,14 +1445,6 @@
             "target_id": 111,
             "target_slot": 5,
             "type": "IMAGE"
-          },
-          {
-            "id": 259,
-            "origin_id": 100,
-            "origin_slot": 0,
-            "target_id": -20,
-            "target_slot": 0,
-            "type": "VIDEO"
           },
           {
             "id": 264,
@@ -1558,6 +1485,14 @@
             "target_id": 96,
             "target_slot": 4,
             "type": "INT"
+          },
+          {
+            "id": 269,
+            "origin_id": 97,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 0,
+            "type": "IMAGE"
           }
         ],
         "extra": {
@@ -1577,10 +1512,10 @@
     "links_added_by_ue": [],
     "workflowRendererVersion": "LG",
     "ds": {
-      "scale": 1.7913461538461535,
+      "scale": 1.3310000000000006,
       "offset": [
-        -85.45356951154054,
-        -1403.3333333333335
+        96.46642359306247,
+        -1445.0408727679383
       ]
     }
   },

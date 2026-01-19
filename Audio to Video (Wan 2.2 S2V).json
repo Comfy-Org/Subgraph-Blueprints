@@ -32,9 +32,16 @@
       ],
       "outputs": [
         {
-          "name": "VIDEO",
-          "type": "VIDEO",
-          "links": []
+          "label": "image",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "label": "audio",
+          "name": "_1",
+          "type": "*",
+          "links": null
         }
       ],
       "properties": {
@@ -2028,8 +2035,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 16,
-          "lastNodeId": 181,
-          "lastLinkId": 507,
+          "lastNodeId": 184,
+          "lastLinkId": 517,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -2050,7 +2057,7 @@
             3002.333360847096,
             425.33334239893713,
             120,
-            60
+            80
           ]
         },
         "inputs": [
@@ -2076,8 +2083,8 @@
             "name": "audio",
             "type": "AUDIO",
             "linkIds": [
-              198,
-              121
+              121,
+              516
             ],
             "localized_name": "audio",
             "shape": 7,
@@ -2137,16 +2144,29 @@
         ],
         "outputs": [
           {
-            "id": "0a3ad0fb-bba4-4550-9741-c0bcc44d2c2c",
-            "name": "VIDEO",
-            "type": "VIDEO",
+            "id": "c30e0e41-de43-45a7-8811-aee82563ab45",
+            "name": "IMAGE",
+            "type": "IMAGE",
             "linkIds": [
-              364
+              509
             ],
-            "localized_name": "VIDEO",
+            "label": "image",
             "pos": [
               3022.333360847096,
               445.33334239893713
+            ]
+          },
+          {
+            "id": "d8ae8fb4-d327-4b8e-a06e-ae59c83010d7",
+            "name": "_1",
+            "type": "*",
+            "linkIds": [
+              517
+            ],
+            "label": "audio",
+            "pos": [
+              3022.333360847096,
+              465.33334239893713
             ]
           }
         ],
@@ -2389,7 +2409,7 @@
               250
             ],
             "flags": {},
-            "order": 26,
+            "order": 25,
             "mode": 0,
             "inputs": [
               {
@@ -2550,57 +2570,6 @@
             ]
           },
           {
-            "id": 96,
-            "type": "ImageFromBatch",
-            "pos": [
-              2612.3337072644204,
-              125.33339253860828
-            ],
-            "size": [
-              210,
-              82
-            ],
-            "flags": {},
-            "order": 29,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "image",
-                "name": "image",
-                "type": "IMAGE",
-                "link": 286
-              },
-              {
-                "localized_name": "batch_index",
-                "name": "batch_index",
-                "type": "INT",
-                "widget": {
-                  "name": "batch_index"
-                },
-                "link": 287
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "IMAGE",
-                "name": "IMAGE",
-                "type": "IMAGE",
-                "links": [
-                  273
-                ]
-              }
-            ],
-            "properties": {
-              "Node name for S&R": "ImageFromBatch",
-              "cnr_id": "comfy-core",
-              "ver": "0.3.54"
-            },
-            "widgets_values": [
-              0,
-              4096
-            ]
-          },
-          {
             "id": 95,
             "type": "LatentConcat",
             "pos": [
@@ -2612,7 +2581,7 @@
               78
             ],
             "flags": {},
-            "order": 28,
+            "order": 27,
             "mode": 0,
             "inputs": [
               {
@@ -2659,7 +2628,7 @@
               106
             ],
             "flags": {},
-            "order": 27,
+            "order": 26,
             "mode": 0,
             "inputs": [
               {
@@ -2759,7 +2728,7 @@
               450
             ],
             "flags": {},
-            "order": 24,
+            "order": 23,
             "mode": 0,
             "inputs": [
               {
@@ -3368,54 +3337,6 @@
             ]
           },
           {
-            "id": 82,
-            "type": "CreateVideo",
-            "pos": [
-              2352.3335921498433,
-              525.3334709450464
-            ],
-            "size": [
-              270,
-              78
-            ],
-            "flags": {},
-            "order": 23,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "images",
-                "name": "images",
-                "type": "IMAGE",
-                "link": 273
-              },
-              {
-                "localized_name": "audio",
-                "name": "audio",
-                "shape": 7,
-                "type": "AUDIO",
-                "link": 198
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "VIDEO",
-                "name": "VIDEO",
-                "type": "VIDEO",
-                "links": [
-                  364
-                ]
-              }
-            ],
-            "properties": {
-              "Node name for S&R": "CreateVideo",
-              "cnr_id": "comfy-core",
-              "ver": "0.3.54"
-            },
-            "widgets_values": [
-              16
-            ]
-          },
-          {
             "id": 181,
             "type": "MarkdownNote",
             "pos": [
@@ -3590,7 +3511,7 @@
               318
             ],
             "flags": {},
-            "order": 25,
+            "order": 24,
             "mode": 4,
             "inputs": [
               {
@@ -3765,6 +3686,93 @@
             ],
             "color": "#222",
             "bgcolor": "#000"
+          },
+          {
+            "id": 96,
+            "type": "ImageFromBatch",
+            "pos": [
+              2612.3337072644204,
+              125.33339253860828
+            ],
+            "size": [
+              210,
+              82
+            ],
+            "flags": {},
+            "order": 28,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "image",
+                "name": "image",
+                "type": "IMAGE",
+                "link": 286
+              },
+              {
+                "localized_name": "batch_index",
+                "name": "batch_index",
+                "type": "INT",
+                "widget": {
+                  "name": "batch_index"
+                },
+                "link": 287
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "IMAGE",
+                "name": "IMAGE",
+                "type": "IMAGE",
+                "links": [
+                  509
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "ImageFromBatch",
+              "cnr_id": "comfy-core",
+              "ver": "0.3.54"
+            },
+            "widgets_values": [
+              0,
+              4096
+            ]
+          },
+          {
+            "id": 184,
+            "type": "Reroute",
+            "pos": [
+              2817.4276601149463,
+              449.65475796539965
+            ],
+            "size": [
+              75,
+              26
+            ],
+            "flags": {},
+            "order": 29,
+            "mode": 0,
+            "inputs": [
+              {
+                "name": "",
+                "type": "*",
+                "link": 516
+              }
+            ],
+            "outputs": [
+              {
+                "name": "",
+                "type": "*",
+                "links": [
+                  517
+                ]
+              }
+            ],
+            "title": "audio",
+            "properties": {
+              "showOutputText": false,
+              "horizontal": false
+            }
           }
         ],
         "groups": [
@@ -4067,14 +4075,6 @@
             "type": "INT"
           },
           {
-            "id": 273,
-            "origin_id": 96,
-            "origin_slot": 0,
-            "target_id": 82,
-            "target_slot": 0,
-            "type": "IMAGE"
-          },
-          {
             "id": 188,
             "origin_id": 54,
             "origin_slot": 0,
@@ -4315,28 +4315,12 @@
             "type": "IMAGE"
           },
           {
-            "id": 198,
-            "origin_id": -10,
-            "origin_slot": 1,
-            "target_id": 82,
-            "target_slot": 1,
-            "type": "AUDIO"
-          },
-          {
             "id": 121,
             "origin_id": -10,
             "origin_slot": 1,
             "target_id": 56,
             "target_slot": 1,
             "type": "AUDIO"
-          },
-          {
-            "id": 364,
-            "origin_id": 82,
-            "origin_slot": 0,
-            "target_id": -20,
-            "target_slot": 0,
-            "type": "VIDEO"
           },
           {
             "id": 504,
@@ -4369,6 +4353,30 @@
             "target_id": 3,
             "target_slot": 4,
             "type": "INT"
+          },
+          {
+            "id": 509,
+            "origin_id": 96,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 516,
+            "origin_id": -10,
+            "origin_slot": 1,
+            "target_id": 184,
+            "target_slot": 0,
+            "type": "*"
+          },
+          {
+            "id": 517,
+            "origin_id": 184,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 1,
+            "type": "*"
           }
         ],
         "extra": {
@@ -4388,8 +4396,8 @@
     "ds": {
       "scale": 1.791346153846154,
       "offset": [
-        1214.9090555218893,
-        -603.4463155013999
+        1170.6162482218353,
+        -612.471912656526
       ]
     }
   },

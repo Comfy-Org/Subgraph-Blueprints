@@ -29,9 +29,10 @@
       ],
       "outputs": [
         {
-          "name": "VIDEO",
-          "type": "VIDEO",
-          "links": []
+          "label": "images",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null
         }
       ],
       "properties": {
@@ -75,7 +76,7 @@
         "state": {
           "lastGroupId": 16,
           "lastNodeId": 116,
-          "lastLinkId": 218,
+          "lastLinkId": 219,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -117,13 +118,13 @@
         ],
         "outputs": [
           {
-            "id": "220bb6cf-2db7-4d67-93d7-04cc90d7e765",
-            "name": "VIDEO",
-            "type": "VIDEO",
+            "id": "8c92318f-2fb8-4b26-916a-4ed448e15b52",
+            "name": "IMAGE",
+            "type": "IMAGE",
             "linkIds": [
-              197
+              219
             ],
-            "localized_name": "VIDEO",
+            "label": "images",
             "pos": [
               1743.4786916118696,
               736.3650158766799
@@ -642,7 +643,7 @@
               210
             ],
             "flags": {},
-            "order": 18,
+            "order": 17,
             "mode": 0,
             "inputs": [
               {
@@ -725,110 +726,6 @@
               81,
               1
             ]
-          },
-          {
-            "id": 94,
-            "type": "CreateVideo",
-            "pos": [
-              1350,
-              460
-            ],
-            "size": [
-              270,
-              78
-            ],
-            "flags": {},
-            "order": 17,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "images",
-                "name": "images",
-                "type": "IMAGE",
-                "link": 182
-              },
-              {
-                "localized_name": "audio",
-                "name": "audio",
-                "shape": 7,
-                "type": "AUDIO",
-                "link": null
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "VIDEO",
-                "name": "VIDEO",
-                "type": "VIDEO",
-                "links": [
-                  197
-                ]
-              }
-            ],
-            "properties": {
-              "Node name for S&R": "CreateVideo",
-              "cnr_id": "comfy-core",
-              "ver": "0.3.45",
-              "ue_properties": {
-                "widget_ue_connectable": {},
-                "version": "7.1",
-                "input_ue_unconnectable": {}
-              }
-            },
-            "widgets_values": [
-              16
-            ]
-          },
-          {
-            "id": 87,
-            "type": "VAEDecode",
-            "pos": [
-              1060,
-              480
-            ],
-            "size": [
-              210,
-              46
-            ],
-            "flags": {},
-            "order": 16,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "samples",
-                "name": "samples",
-                "type": "LATENT",
-                "link": 175
-              },
-              {
-                "localized_name": "vae",
-                "name": "vae",
-                "type": "VAE",
-                "link": 176
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "IMAGE",
-                "name": "IMAGE",
-                "type": "IMAGE",
-                "slot_index": 0,
-                "links": [
-                  182
-                ]
-              }
-            ],
-            "properties": {
-              "Node name for S&R": "VAEDecode",
-              "cnr_id": "comfy-core",
-              "ver": "0.3.45",
-              "ue_properties": {
-                "widget_ue_connectable": {},
-                "version": "7.1",
-                "input_ue_unconnectable": {}
-              }
-            },
-            "widgets_values": []
           },
           {
             "id": 86,
@@ -1095,6 +992,57 @@
             ],
             "color": "#222",
             "bgcolor": "#000"
+          },
+          {
+            "id": 87,
+            "type": "VAEDecode",
+            "pos": [
+              1060,
+              480
+            ],
+            "size": [
+              210,
+              46
+            ],
+            "flags": {},
+            "order": 16,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "samples",
+                "name": "samples",
+                "type": "LATENT",
+                "link": 175
+              },
+              {
+                "localized_name": "vae",
+                "name": "vae",
+                "type": "VAE",
+                "link": 176
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "IMAGE",
+                "name": "IMAGE",
+                "type": "IMAGE",
+                "slot_index": 0,
+                "links": [
+                  219
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "VAEDecode",
+              "cnr_id": "comfy-core",
+              "ver": "0.3.45",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "version": "7.1",
+                "input_ue_unconnectable": {}
+              }
+            },
+            "widgets_values": []
           }
         ],
         "groups": [
@@ -1251,14 +1199,6 @@
             "type": "VAE"
           },
           {
-            "id": 182,
-            "origin_id": 87,
-            "origin_slot": 0,
-            "target_id": 94,
-            "target_slot": 0,
-            "type": "IMAGE"
-          },
-          {
             "id": 175,
             "origin_id": 85,
             "origin_slot": 0,
@@ -1347,12 +1287,12 @@
             "type": "IMAGE"
           },
           {
-            "id": 197,
-            "origin_id": 94,
+            "id": 219,
+            "origin_id": 87,
             "origin_slot": 0,
             "target_id": -20,
             "target_slot": 0,
-            "type": "VIDEO"
+            "type": "IMAGE"
           }
         ],
         "extra": {
@@ -1371,10 +1311,10 @@
     "ue_links": [],
     "workflowRendererVersion": "LG",
     "ds": {
-      "scale": 1.791346153846154,
+      "scale": 1.3458648789227303,
       "offset": [
-        -585.4535695115405,
-        396.66666666666663
+        -469.8337154537726,
+        640.7364771803689
       ]
     }
   },

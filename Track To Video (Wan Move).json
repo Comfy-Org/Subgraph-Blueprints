@@ -1,8 +1,8 @@
 {
   "id": "21b233a5-6369-4579-b0db-27c46b3c9124",
   "revision": 0,
-  "last_node_id": 267,
-  "last_link_id": 0,
+  "last_node_id": 271,
+  "last_link_id": 2,
   "nodes": [
     {
       "id": -1,
@@ -32,9 +32,10 @@
       ],
       "outputs": [
         {
-          "name": "VIDEO",
-          "type": "VIDEO",
-          "links": []
+          "label": "images",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null
         }
       ],
       "properties": {
@@ -80,9 +81,9 @@
         "id": "8b0c6182-dfa3-4571-9c60-44152e5fda9f",
         "version": 1,
         "state": {
-          "lastGroupId": 5,
+          "lastGroupId": 6,
           "lastNodeId": 256,
-          "lastLinkId": 596,
+          "lastLinkId": 598,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -123,20 +124,6 @@
             ]
           },
           {
-            "id": "0ad18015-7e45-40d5-8bbe-13f6fbe77976",
-            "name": "tracks",
-            "type": "TRACKS",
-            "linkIds": [
-              593
-            ],
-            "localized_name": "tracks",
-            "shape": 7,
-            "pos": [
-              -1900,
-              -1350.500011806584
-            ]
-          },
-          {
             "id": "e14e3c9e-94d3-470a-9c17-df0dcbdc2a35",
             "name": "text",
             "type": "STRING",
@@ -145,7 +132,7 @@
             ],
             "pos": [
               -1900,
-              -1330.500011806584
+              -1350.500011806584
             ]
           },
           {
@@ -157,19 +144,31 @@
             ],
             "pos": [
               -1900,
+              -1330.500011806584
+            ]
+          },
+          {
+            "id": "11177804-3a63-4ec3-a304-da794c113fab",
+            "name": "tracks",
+            "type": "TRACKS",
+            "linkIds": [
+              598
+            ],
+            "pos": [
+              -1900,
               -1310.500011806584
             ]
           }
         ],
         "outputs": [
           {
-            "id": "4d96160c-f3b1-4209-8ffd-6eabcb93a1e2",
-            "name": "VIDEO",
-            "type": "VIDEO",
+            "id": "04a6a36c-4434-474a-be35-770646cda38e",
+            "name": "IMAGE",
+            "type": "IMAGE",
             "linkIds": [
-              562
+              597
             ],
-            "localized_name": "VIDEO",
+            "label": "images",
             "pos": [
               -176.16015625,
               -1360.500011806584
@@ -431,68 +430,11 @@
             ]
           },
           {
-            "id": 234,
-            "type": "CreateVideo",
-            "pos": [
-              -390,
-              -1640
-            ],
-            "size": [
-              210,
-              54
-            ],
-            "flags": {
-              "collapsed": true
-            },
-            "order": 14,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "images",
-                "name": "images",
-                "type": "IMAGE",
-                "link": 561
-              },
-              {
-                "localized_name": "audio",
-                "name": "audio",
-                "shape": 7,
-                "type": "AUDIO",
-                "link": null
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "VIDEO",
-                "name": "VIDEO",
-                "type": "VIDEO",
-                "links": [
-                  562
-                ]
-              }
-            ],
-            "properties": {
-              "Node name for S&R": "CreateVideo",
-              "cnr_id": "comfy-core",
-              "ver": "0.4.0",
-              "enableTabs": false,
-              "tabWidth": 65,
-              "tabXOffset": 10,
-              "hasSecondTab": false,
-              "secondTabText": "Send Back",
-              "secondTabOffset": 80,
-              "secondTabWidth": 65
-            },
-            "widgets_values": [
-              16
-            ]
-          },
-          {
             "id": 61,
             "type": "ModelSamplingSD3",
             "pos": [
-              -990,
-              -1700
+              -989.8171482487925,
+              -1676.9374600778312
             ],
             "size": [
               270,
@@ -690,11 +632,176 @@
             "widgets_values": []
           },
           {
+            "id": 34,
+            "type": "CLIPTextEncode",
+            "pos": [
+              -1417.999903167294,
+              -1442.000009622027
+            ],
+            "size": [
+              375,
+              103.33333333333334
+            ],
+            "flags": {
+              "collapsed": false
+            },
+            "order": 4,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "clip",
+                "name": "clip",
+                "type": "CLIP",
+                "link": 447
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "CONDITIONING",
+                "name": "CONDITIONING",
+                "type": "CONDITIONING",
+                "links": [
+                  452
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "CLIPTextEncode",
+              "cnr_id": "comfy-core",
+              "ver": "0.3.68",
+              "enableTabs": false,
+              "tabWidth": 65,
+              "tabXOffset": 10,
+              "hasSecondTab": false,
+              "secondTabText": "Send Back",
+              "secondTabOffset": 80,
+              "secondTabWidth": 65
+            },
+            "widgets_values": [
+              "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走"
+            ],
+            "color": "#223",
+            "bgcolor": "#335"
+          },
+          {
+            "id": 151,
+            "type": "CLIPTextEncode",
+            "pos": [
+              -1420,
+              -1680
+            ],
+            "size": [
+              390,
+              200
+            ],
+            "flags": {},
+            "order": 11,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "clip",
+                "name": "clip",
+                "type": "CLIP",
+                "link": 446
+              },
+              {
+                "localized_name": "text",
+                "name": "text",
+                "type": "STRING",
+                "widget": {
+                  "name": "text"
+                },
+                "link": 594
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "CONDITIONING",
+                "name": "CONDITIONING",
+                "type": "CONDITIONING",
+                "links": [
+                  451
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "CLIPTextEncode",
+              "cnr_id": "comfy-core",
+              "ver": "0.3.68",
+              "enableTabs": false,
+              "tabWidth": 65,
+              "tabXOffset": 10,
+              "hasSecondTab": false,
+              "secondTabText": "Send Back",
+              "secondTabOffset": 80,
+              "secondTabWidth": 65
+            },
+            "widgets_values": [
+              ""
+            ],
+            "color": "#232",
+            "bgcolor": "#353"
+          },
+          {
+            "id": 131,
+            "type": "VAEDecode",
+            "pos": [
+              -389.8171482487923,
+              -1676.9374600778312
+            ],
+            "size": [
+              140,
+              46
+            ],
+            "flags": {
+              "collapsed": true
+            },
+            "order": 9,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "samples",
+                "name": "samples",
+                "type": "LATENT",
+                "link": 313
+              },
+              {
+                "localized_name": "vae",
+                "name": "vae",
+                "type": "VAE",
+                "link": 522
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "IMAGE",
+                "name": "IMAGE",
+                "type": "IMAGE",
+                "links": [
+                  597
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "VAEDecode",
+              "cnr_id": "comfy-core",
+              "ver": "0.3.71",
+              "enableTabs": false,
+              "tabWidth": 65,
+              "tabXOffset": 10,
+              "hasSecondTab": false,
+              "secondTabText": "Send Back",
+              "secondTabOffset": 80,
+              "secondTabWidth": 65
+            },
+            "widgets_values": []
+          },
+          {
             "id": 144,
             "type": "KSampler",
             "pos": [
-              -690,
-              -1700
+              -689.8171482487925,
+              -1676.9374600778312
             ],
             "size": [
               270,
@@ -762,117 +869,11 @@
             ]
           },
           {
-            "id": 131,
-            "type": "VAEDecode",
-            "pos": [
-              -390,
-              -1700
-            ],
-            "size": [
-              140,
-              46
-            ],
-            "flags": {
-              "collapsed": true
-            },
-            "order": 9,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "samples",
-                "name": "samples",
-                "type": "LATENT",
-                "link": 313
-              },
-              {
-                "localized_name": "vae",
-                "name": "vae",
-                "type": "VAE",
-                "link": 522
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "IMAGE",
-                "name": "IMAGE",
-                "type": "IMAGE",
-                "links": [
-                  561
-                ]
-              }
-            ],
-            "properties": {
-              "Node name for S&R": "VAEDecode",
-              "cnr_id": "comfy-core",
-              "ver": "0.3.71",
-              "enableTabs": false,
-              "tabWidth": 65,
-              "tabXOffset": 10,
-              "hasSecondTab": false,
-              "secondTabText": "Send Back",
-              "secondTabOffset": 80,
-              "secondTabWidth": 65
-            },
-            "widgets_values": []
-          },
-          {
-            "id": 34,
-            "type": "CLIPTextEncode",
-            "pos": [
-              -1417.999903167294,
-              -1442.000009622027
-            ],
-            "size": [
-              375,
-              103.33333333333334
-            ],
-            "flags": {
-              "collapsed": false
-            },
-            "order": 4,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "clip",
-                "name": "clip",
-                "type": "CLIP",
-                "link": 447
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "CONDITIONING",
-                "name": "CONDITIONING",
-                "type": "CONDITIONING",
-                "links": [
-                  452
-                ]
-              }
-            ],
-            "properties": {
-              "Node name for S&R": "CLIPTextEncode",
-              "cnr_id": "comfy-core",
-              "ver": "0.3.68",
-              "enableTabs": false,
-              "tabWidth": 65,
-              "tabXOffset": 10,
-              "hasSecondTab": false,
-              "secondTabText": "Send Back",
-              "secondTabOffset": 80,
-              "secondTabWidth": 65
-            },
-            "widgets_values": [
-              "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走"
-            ],
-            "color": "#223",
-            "bgcolor": "#335"
-          },
-          {
             "id": 195,
             "type": "WanMoveTrackToVideo",
             "pos": [
-              -990,
-              -1580
+              -989.8171482487925,
+              -1556.9374600778312
             ],
             "size": [
               266.77083333333337,
@@ -911,7 +912,7 @@
                 "name": "tracks",
                 "shape": 7,
                 "type": "TRACKS",
-                "link": 593
+                "link": 598
               },
               {
                 "localized_name": "clip_vision_output",
@@ -993,65 +994,6 @@
               81,
               1
             ]
-          },
-          {
-            "id": 151,
-            "type": "CLIPTextEncode",
-            "pos": [
-              -1420,
-              -1680
-            ],
-            "size": [
-              390,
-              200
-            ],
-            "flags": {},
-            "order": 11,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "clip",
-                "name": "clip",
-                "type": "CLIP",
-                "link": 446
-              },
-              {
-                "localized_name": "text",
-                "name": "text",
-                "type": "STRING",
-                "widget": {
-                  "name": "text"
-                },
-                "link": 594
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "CONDITIONING",
-                "name": "CONDITIONING",
-                "type": "CONDITIONING",
-                "links": [
-                  451
-                ]
-              }
-            ],
-            "properties": {
-              "Node name for S&R": "CLIPTextEncode",
-              "cnr_id": "comfy-core",
-              "ver": "0.3.68",
-              "enableTabs": false,
-              "tabWidth": 65,
-              "tabXOffset": 10,
-              "hasSecondTab": false,
-              "secondTabText": "Send Back",
-              "secondTabOffset": 80,
-              "secondTabWidth": 65
-            },
-            "widgets_values": [
-              ""
-            ],
-            "color": "#232",
-            "bgcolor": "#353"
           }
         ],
         "groups": [
@@ -1080,6 +1022,19 @@
             "color": "#444",
             "font_size": 24,
             "flags": {}
+          },
+          {
+            "id": 6,
+            "title": "Ksampler",
+            "bounding": [
+              -999.8171482487925,
+              -1750.5374600778312,
+              750.376953125,
+              613.6
+            ],
+            "color": "#444",
+            "font_size": 24,
+            "flags": {}
           }
         ],
         "links": [
@@ -1090,14 +1045,6 @@
             "target_id": 231,
             "target_slot": 0,
             "type": "MODEL"
-          },
-          {
-            "id": 561,
-            "origin_id": 131,
-            "origin_slot": 0,
-            "target_id": 234,
-            "target_slot": 0,
-            "type": "IMAGE"
           },
           {
             "id": 559,
@@ -1260,25 +1207,9 @@
             "type": "IMAGE"
           },
           {
-            "id": 593,
-            "origin_id": -10,
-            "origin_slot": 1,
-            "target_id": 195,
-            "target_slot": 4,
-            "type": "TRACKS"
-          },
-          {
-            "id": 562,
-            "origin_id": 234,
-            "origin_slot": 0,
-            "target_id": -20,
-            "target_slot": 0,
-            "type": "VIDEO"
-          },
-          {
             "id": 594,
             "origin_id": -10,
-            "origin_slot": 2,
+            "origin_slot": 1,
             "target_id": 151,
             "target_slot": 1,
             "type": "STRING"
@@ -1286,10 +1217,26 @@
           {
             "id": 596,
             "origin_id": -10,
-            "origin_slot": 3,
+            "origin_slot": 2,
             "target_id": 195,
             "target_slot": 8,
             "type": "INT"
+          },
+          {
+            "id": 597,
+            "origin_id": 131,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 598,
+            "origin_id": -10,
+            "origin_slot": 3,
+            "target_id": 195,
+            "target_slot": 4,
+            "type": "TRACKS"
           }
         ],
         "extra": {
@@ -1302,10 +1249,10 @@
   "extra": {
     "workflowRendererVersion": "LG",
     "ds": {
-      "scale": 1.791346153846154,
+      "scale": 1.1122850239030835,
       "offset": [
-        1414.5464304884595,
-        1596.6666666666665
+        1797.9699959926004,
+        1859.3774234807277
       ]
     },
     "frontendVersion": "1.37.10",
