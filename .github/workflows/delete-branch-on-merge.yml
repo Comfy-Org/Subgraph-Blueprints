@@ -1,0 +1,35 @@
+name: Delete branch on PR merge
+
+on:
+  pull_request:
+    types: [closed]
+
+permissions:
+  contents: write
+
+jobs:
+  delete-head-branch:
+    # 仅在合并成功时执行，且 head 在本仓库（fork PR 无法代删对方分支）
+    if: github.event.pull_request.merged == true && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete merged head branch
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const branch = context.payload.pull_request.head.ref;
+            const defaultBranch = context.payload.repository.default_branch;
+            if (branch === defaultBranch) {
+              core.info(`Skip: head is default branch (${branch})`);
+              return;
+            }
+            try {
+              await github.rest.git.deleteRef({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                ref: `heads/${branch}`,
+              });
+              core.info(`Deleted branch: ${branch}`);
+            } catch (e) {
+              core.warning(`Could not delete branch ${branch}: ${e.message}`);
+            }
